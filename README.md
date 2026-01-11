@@ -52,15 +52,17 @@ boussole-finance/
 
 ## Fonctionnalités
 
-- ✅ Articles éducatifs sur la finance personnelle
-- ✅ Tests de produits financiers avec notes
-- ✅ 3 calculateurs interactifs :
+- ✅ **37 articles éducatifs** couvrant toutes les catégories de finance personnelle
+- ✅ Tests de produits financiers avec notes et liens d'affiliation
+- ✅ **3 calculateurs interactifs** avec graphiques :
   - Calculateur d'intérêts composés
   - Calculateur de budget mensuel
   - Calculateur de capacité d'emprunt
 - ✅ Recherche et filtrage par catégorie
-- ✅ Design responsive
+- ✅ Design responsive (mobile-first)
 - ✅ Newsletter (formulaire placeholder)
+- ✅ **Analytics intégré** (Plausible + Google Analytics optionnel)
+- ✅ **Pages légales complètes** (Mentions légales, CGU, Politique de confidentialité)
 
 ## Palette de couleurs
 
@@ -69,15 +71,55 @@ boussole-finance/
 - **Accent** (vert clair) : `#BED3C3`
 - **Neutral** (bleu-gris) : `#7A90A4`
 
+## Configuration Analytics
+
+Voir [ANALYTICS.md](./ANALYTICS.md) pour configurer Plausible ou Google Analytics.
+
+**Recommandation :** Utilisez Plausible pour une solution respectueuse de la vie privée et sans cookies.
+
+## Pages légales
+
+✅ Les pages légales sont déjà créées et conformes RGPD :
+- `/mentions-legales` - À personnaliser avec vos informations
+- `/politique-confidentialite` - Complète et conforme RGPD
+- `/cgu` - Conditions générales d'utilisation
+
+**⚠️ Important :** Mettez à jour les informations de l'éditeur dans les mentions légales.
+
+## Optimisation SEO
+
+✅ Le site est entièrement optimisé pour le référencement :
+- **Sitemap.xml dynamique** : Généré automatiquement (`/sitemap.xml`)
+- **Robots.txt** : Configuration SEO-friendly (`/robots.txt`)
+- **Métadonnées optimisées** : Title, description, keywords pour chaque page
+- **Open Graph & Twitter Cards** : Partage optimisé sur réseaux sociaux
+- **Données structurées JSON-LD** : Schema.org (Organization, Article, Product Review, Breadcrumb)
+- **Manifest.json** : Configuration PWA
+- **URLs SEO-friendly** : Propres et descriptives
+
+📖 **Guide complet** : Voir [SEO.md](./SEO.md) pour configuration et bonnes pratiques
+
+**⚠️ Configuration requise :**
+1. Remplacer `https://boussole-finance.fr` par votre domaine dans :
+   - `app/sitemap.ts`
+   - `app/robots.ts`
+   - `lib/seo.ts`
+2. Créer les icônes manquantes (voir SEO.md)
+3. Soumettre le sitemap à Google Search Console après déploiement
+
 ## Prochaines étapes
 
-- [ ] Générer du contenu SEO réel (30-40 articles)
+- [x] Générer du contenu SEO réel (37 articles ✅)
+- [x] Ajouter Analytics (Plausible + GA optionnel ✅)
+- [x] Créer les pages légales ✅
+- [x] Optimiser le SEO (sitemap, robots.txt, schema.org, métadonnées ✅)
 - [ ] Intégrer une vraie newsletter (ConvertKit ou Mailchimp)
-- [ ] Ajouter Analytics (Plausible ou Google Analytics)
-- [ ] Créer les pages légales (mentions légales, politique de confidentialité)
 - [ ] Configurer les liens d'affiliation réels
-- [ ] Optimiser les images et le SEO
+- [ ] Créer les icônes PWA (192x192, 512x512)
+- [ ] Ajouter des images réelles pour les articles
 - [ ] Déployer sur Vercel
+- [ ] Configurer un nom de domaine
+- [ ] Soumettre sitemap à Google Search Console
 
 ## Licence
 
