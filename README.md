@@ -52,17 +52,40 @@ boussole-finance/
 
 ## Fonctionnalités
 
+### Contenu
 - ✅ **37 articles éducatifs** couvrant toutes les catégories de finance personnelle
-- ✅ Tests de produits financiers avec notes et liens d'affiliation
-- ✅ **3 calculateurs interactifs** avec graphiques :
+- ✅ **5 tests produits** détaillés avec notes et liens d'affiliation
+- ✅ **3 calculateurs interactifs** avec graphiques (Recharts) :
   - Calculateur d'intérêts composés
   - Calculateur de budget mensuel
   - Calculateur de capacité d'emprunt
+
+### Navigation & UX
 - ✅ Recherche et filtrage par catégorie
+- ✅ **Breadcrumb visuel** (fil d'Ariane)
+- ✅ **Articles similaires** en fin d'article
+- ✅ **Barre de progression de lecture**
+- ✅ **Page 404 personnalisée** avec suggestions
 - ✅ Design responsive (mobile-first)
+
+### Partage & Engagement
+- ✅ **Boutons de partage** (Twitter, Facebook, LinkedIn, Email, Copier)
+- ✅ **RSS Feed** (`/feed.xml`)
 - ✅ Newsletter (formulaire placeholder)
+
+### Technique & SEO
+- ✅ **Sitemap.xml dynamique**
+- ✅ **Robots.txt** SEO-friendly
+- ✅ **Métadonnées optimisées** (Open Graph, Twitter Cards)
+- ✅ **Données structurées JSON-LD** (Schema.org)
+- ✅ **Manifest PWA**
 - ✅ **Analytics intégré** (Plausible + Google Analytics optionnel)
+- ✅ **Variables d'environnement** (.env)
+
+### Légal
 - ✅ **Pages légales complètes** (Mentions légales, CGU, Politique de confidentialité)
+
+📖 **Documentation complète** : Voir [FEATURES.md](./FEATURES.md) pour l'utilisation de chaque fonctionnalité
 
 ## Palette de couleurs
 
