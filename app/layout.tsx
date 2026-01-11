@@ -3,25 +3,26 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { PlausibleAnalytics, GoogleAnalytics } from "@/components/Analytics";
+import { generateMetadata as generateSEOMetadata, generateOrganizationSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: 'Boussole Finance - Guide de Finance Personnelle pour Débutants',
-  description: 'Apprenez la finance personnelle simplement : banques, investissements, épargne. Tests de produits et calculateurs gratuits.',
-  keywords: ['finance personnelle', 'banque', 'investissement', 'épargne', 'budget'],
-  openGraph: {
-    title: 'Boussole Finance',
-    description: 'Votre guide finance personnelle',
-    images: ['/og-image.jpg'],
-  },
-};
+export const metadata: Metadata = generateSEOMetadata({});
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = generateOrganizationSchema();
+
   return (
     <html lang="fr">
+      <head>
+        {/* Données structurées JSON-LD pour SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body className="antialiased">
         <PlausibleAnalytics />
         <GoogleAnalytics />

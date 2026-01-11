@@ -86,17 +86,40 @@ Voir [ANALYTICS.md](./ANALYTICS.md) pour configurer Plausible ou Google Analytic
 
 **⚠️ Important :** Mettez à jour les informations de l'éditeur dans les mentions légales.
 
+## Optimisation SEO
+
+✅ Le site est entièrement optimisé pour le référencement :
+- **Sitemap.xml dynamique** : Généré automatiquement (`/sitemap.xml`)
+- **Robots.txt** : Configuration SEO-friendly (`/robots.txt`)
+- **Métadonnées optimisées** : Title, description, keywords pour chaque page
+- **Open Graph & Twitter Cards** : Partage optimisé sur réseaux sociaux
+- **Données structurées JSON-LD** : Schema.org (Organization, Article, Product Review, Breadcrumb)
+- **Manifest.json** : Configuration PWA
+- **URLs SEO-friendly** : Propres et descriptives
+
+📖 **Guide complet** : Voir [SEO.md](./SEO.md) pour configuration et bonnes pratiques
+
+**⚠️ Configuration requise :**
+1. Remplacer `https://boussole-finance.fr` par votre domaine dans :
+   - `app/sitemap.ts`
+   - `app/robots.ts`
+   - `lib/seo.ts`
+2. Créer les icônes manquantes (voir SEO.md)
+3. Soumettre le sitemap à Google Search Console après déploiement
+
 ## Prochaines étapes
 
 - [x] Générer du contenu SEO réel (37 articles ✅)
 - [x] Ajouter Analytics (Plausible + GA optionnel ✅)
 - [x] Créer les pages légales ✅
+- [x] Optimiser le SEO (sitemap, robots.txt, schema.org, métadonnées ✅)
 - [ ] Intégrer une vraie newsletter (ConvertKit ou Mailchimp)
 - [ ] Configurer les liens d'affiliation réels
+- [ ] Créer les icônes PWA (192x192, 512x512)
 - [ ] Ajouter des images réelles pour les articles
-- [ ] Optimiser le SEO (sitemap, robots.txt, schema.org)
 - [ ] Déployer sur Vercel
 - [ ] Configurer un nom de domaine
+- [ ] Soumettre sitemap à Google Search Console
 
 ## Licence
 
