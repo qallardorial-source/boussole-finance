@@ -19,8 +19,9 @@ export default function Footer() {
       { name: "Budget", href: "/articles?category=budget" },
     ],
     "Légal": [
-      { name: "Politique de confidentialité", href: "/politique-confidentialite" },
       { name: "Mentions légales", href: "/mentions-legales" },
+      { name: "Politique de confidentialité", href: "/politique-confidentialite" },
+      { name: "CGU", href: "/cgu" },
     ],
   };
 
