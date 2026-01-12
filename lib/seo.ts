@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
 
 export const siteConfig = {
-  name: 'Boussole Finance',
+  name: process.env.NEXT_PUBLIC_SITE_NAME || 'Boussole Finance',
   title: 'Boussole Finance - Guide de Finance Personnelle pour Débutants',
   description: 'Apprenez la finance personnelle simplement : banques, investissements, épargne. Tests de produits et calculateurs gratuits.',
-  url: 'https://boussole-finance.fr', // À remplacer par votre domaine réel
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://boussole-finance.fr',
   ogImage: '/og-image.jpg',
   keywords: [
     'finance personnelle',

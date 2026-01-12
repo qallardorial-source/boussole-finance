@@ -52,17 +52,47 @@ boussole-finance/
 
 ## Fonctionnalités
 
+### Contenu
 - ✅ **37 articles éducatifs** couvrant toutes les catégories de finance personnelle
-- ✅ Tests de produits financiers avec notes et liens d'affiliation
-- ✅ **3 calculateurs interactifs** avec graphiques :
-  - Calculateur d'intérêts composés
-  - Calculateur de budget mensuel
-  - Calculateur de capacité d'emprunt
-- ✅ Recherche et filtrage par catégorie
-- ✅ Design responsive (mobile-first)
+- ✅ **5 tests produits** détaillés avec notes et liens d'affiliation
+- ✅ **9 calculateurs professionnels interactifs** avec graphiques (Recharts) :
+  - **Calculateur d'impôts (TMI 2026)** - Calcul avec tranches fiscales 2026
+  - **Comparateur de frais bancaires** - Compare banques traditionnelles vs en ligne
+  - **Simulateur de rendement locatif** - Rentabilité brute et nette d'un investissement
+  - **Projection épargne retraite** - Graphique d'évolution avec intérêts composés
+  - **Calculateur rachat de crédit** - Analyse coût/bénéfice de consolidation
+  - **Calculateur d'intérêts composés** - Projeter votre épargne long terme
+  - **Calculateur de budget mensuel** - Analyser revenus et dépenses
+  - **Calculateur de capacité d'emprunt** - Estimer votre crédit immobilier
+
+### Navigation & UX
+- ✅ **Header professionnel avec mega-menu** - Dropdowns pour Articles et Calculateurs
+- ✅ **Recherche intégrée** dans le header
+- ✅ Recherche et filtrage par catégorie dans les pages
+- ✅ **Breadcrumb visuel** (fil d'Ariane)
+- ✅ **Articles similaires** en fin d'article
+- ✅ **Barre de progression de lecture**
+- ✅ **Page 404 personnalisée** avec suggestions
+- ✅ Design responsive et professionnel (mobile-first)
+
+### Partage & Engagement
+- ✅ **Boutons de partage** (Twitter, Facebook, LinkedIn, Email, Copier)
+- ✅ **RSS Feed** (`/feed.xml`)
 - ✅ Newsletter (formulaire placeholder)
+
+### Technique & SEO
+- ✅ **Sitemap.xml dynamique**
+- ✅ **Robots.txt** SEO-friendly
+- ✅ **Métadonnées optimisées** (Open Graph, Twitter Cards)
+- ✅ **Données structurées JSON-LD** (Schema.org)
+- ✅ **Manifest PWA**
 - ✅ **Analytics intégré** (Plausible + Google Analytics optionnel)
+- ✅ **Variables d'environnement** (.env)
+
+### Légal
 - ✅ **Pages légales complètes** (Mentions légales, CGU, Politique de confidentialité)
+
+📖 **Documentation complète** : Voir [FEATURES.md](./FEATURES.md) pour l'utilisation de chaque fonctionnalité
 
 ## Palette de couleurs
 
