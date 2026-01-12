@@ -207,6 +207,89 @@ NEXT_PUBLIC_TWITTER_HANDLE=@votre_compte
 
 ---
 
+### 9. Header professionnel avec mega-menu ✅
+
+**Fichier** : `components/Header.tsx`
+
+Navigation professionnelle avec dropdowns au survol.
+
+**Fonctionnalités** :
+- **Logo amélioré** avec gradient et tagline "Finance pour tous"
+- **Mega-menu Articles** avec 6 catégories (icônes + descriptions)
+- **Mega-menu Calculateurs** avec les 8 calculateurs
+- **Barre de recherche intégrée** dans le header
+- **CTA "Calculateurs"** avec gradient
+- Menu mobile responsive
+
+**UX** :
+- Dropdowns s'ouvrent au survol (desktop)
+- Animations fluides (fade-in, slide-in)
+- Design moderne avec ombres et effets hover
+
+---
+
+### 10. Calculateurs professionnels supplémentaires ✅
+
+**5 nouveaux calculateurs** ajoutés pour offrir des outils complets :
+
+#### 10.1. Calculateur d'impôts (TMI 2026)
+**Fichier** : `components/calculators/TaxCalculator.tsx`
+
+- Tranches fiscales 2026 à jour
+- Calcul TMI (Tranche Marginale d'Imposition)
+- Taux moyen d'imposition
+- Quotient familial (parts fiscales)
+- Détail par tranche avec breakdown
+- Section éducative TMI vs taux moyen
+
+#### 10.2. Comparateur de frais bancaires
+**Fichier** : `components/calculators/BankFeesCalculator.tsx`
+
+- Compare 4 banques (traditionnelle + 3 en ligne)
+- Profil utilisateur personnalisable
+- Calcul annuel des frais
+- Économies potentielles affichées
+- Alertes conditions de revenus non remplies
+- Recommandations bancaires
+
+#### 10.3. Simulateur de rendement locatif
+**Fichier** : `components/calculators/RentalYieldCalculator.tsx`
+
+- Rendement brut et net
+- Frais de notaire (neuf/ancien)
+- Travaux et charges
+- Vacance locative
+- Frais de gestion
+- Cashflow mensuel
+- Retour sur investissement
+- Analyse de rentabilité automatique
+
+#### 10.4. Projection épargne retraite
+**Fichier** : `components/calculators/RetirementSavingsCalculator.tsx`
+
+- **Graphique interactif** (AreaChart avec Recharts)
+- Projection année par année
+- Intérêts composés visualisés
+- Étapes clés affichées
+- Rente mensuelle estimée (règle 4%)
+- Section "magie des intérêts composés"
+- Conseils personnalisés
+
+#### 10.5. Calculateur rachat de crédit
+**Fichier** : `components/calculators/DebtConsolidationCalculator.tsx`
+
+- Gestion multi-crédits (ajout/suppression dynamique)
+- Comparaison avant/après
+- Économie mensuelle
+- Différence coût total
+- Impact taux d'endettement
+- Verdict automatique (intéressant ou non)
+- Points de vigilance (IRA, frais de dossier)
+
+**Placement** : Tous intégrés dans `/calculateurs` avec ancres ID
+
+---
+
 ## 📝 Comment utiliser ces composants ensemble
 
 ### Exemple : Page article complète
