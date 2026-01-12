@@ -24,10 +24,13 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
+        <a href="#main-content" className="skip-link">
+          Aller au contenu principal
+        </a>
         <PlausibleAnalytics />
         <GoogleAnalytics />
         <Header />
-        <main className="min-h-screen">
+        <main id="main-content" className="min-h-screen">
           {children}
         </main>
         <Footer />
