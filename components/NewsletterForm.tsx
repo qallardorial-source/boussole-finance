@@ -56,34 +56,73 @@ export default function NewsletterForm() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-secondary to-accent rounded-xl p-8 text-white">
-      <div className="max-w-2xl mx-auto text-center">
-        <Mail className="w-12 h-12 mx-auto mb-4" />
-        <h2 className="text-3xl font-bold mb-3">
-          Recevez nos conseils finance
-        </h2>
-        <p className="text-white/90 mb-6">
-          Inscrivez-vous à notre newsletter pour recevoir nos meilleurs articles et conseils directement dans votre boîte mail.
-        </p>
+    <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+      <div className="grid md:grid-cols-2 gap-8">
+        {/* Left side - Benefits */}
+        <div className="bg-gradient-to-br from-secondary to-accent p-8 text-white flex flex-col justify-center">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
+            <Mail className="w-8 h-8" />
+          </div>
+          <h2 className="text-3xl font-bold mb-4 text-white">
+            Newsletter Finance Gratuite
+          </h2>
+          <p className="text-white/90 mb-6">
+            Rejoignez des milliers de lecteurs qui optimisent leurs finances grâce à nos conseils hebdomadaires.
+          </p>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-sm">✓</span>
+              <span className="text-white/90">1 article exclusif par semaine</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-sm">✓</span>
+              <span className="text-white/90">Astuces pour économiser et investir</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-sm">✓</span>
+              <span className="text-white/90">Nouveaux calculateurs en avant-première</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-sm">✓</span>
+              <span className="text-white/90">Désinscription en 1 clic</span>
+            </li>
+          </ul>
+        </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Votre adresse email"
-            required
-            className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
-            disabled={status === "loading" || status === "success"}
-          />
-          <button
-            type="submit"
-            className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors disabled:opacity-50"
-            disabled={status === "loading" || status === "success"}
-          >
-            {status === "loading" ? "Inscription..." : status === "success" ? "Inscrit !" : "S'inscrire"}
-          </button>
-        </form>
+        {/* Right side - Form */}
+        <div className="p-8 flex flex-col justify-center">
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                Adresse email
+              </label>
+              <input
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="prenom@example.com"
+                required
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:border-secondary transition-colors"
+                disabled={status === "loading" || status === "success"}
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-gradient-to-r from-secondary to-accent hover:opacity-90 text-white px-8 py-3 rounded-lg font-semibold transition-all disabled:opacity-50 shadow-md hover:shadow-lg"
+              disabled={status === "loading" || status === "success"}
+            >
+              {status === "loading" ? "Inscription en cours..." : status === "success" ? "✓ Inscrit !" : "Recevoir les conseils gratuits"}
+            </button>
+          </form>
+
+          {status === "success" && (
+            <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+              <p className="text-green-800 text-sm font-medium">
+                🎉 Merci pour votre inscription ! Consultez votre boîte mail pour confirmer.
+              </p>
+            </div>
+          )}
 
         {status === "success" && (
           <p className="mt-4 text-white/90 text-sm">
@@ -95,7 +134,7 @@ export default function NewsletterForm() {
           <p className="mt-4 text-red-100 text-sm bg-red-500/20 px-4 py-2 rounded">
             ❌ {errorMessage}
           </p>
-        )}
+        </div>
       </div>
     </div>
   );

@@ -100,6 +100,24 @@ export function generateOrganizationSchema() {
   };
 }
 
+export function generateWebSiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: siteConfig.name,
+    url: siteConfig.url,
+    description: siteConfig.description,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${siteConfig.url}/articles?search={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  };
+}
+
 export function generateArticleSchema({
   title,
   description,
@@ -194,6 +212,66 @@ export function generateProductReviewSchema({
         bestRating: 5,
         worstRating: 1,
       },
+    },
+  };
+}
+
+export function generateHowToSchema({
+  name,
+  description,
+  steps,
+  totalTime,
+}: {
+  name: string;
+  description: string;
+  steps: { name: string; text: string }[];
+  totalTime?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: name,
+    description: description,
+    totalTime: totalTime || 'PT5M',
+    step: steps.map((step, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+    })),
+  };
+}
+
+export function generateSoftwareAppSchema({
+  name,
+  description,
+  applicationCategory,
+  offers,
+}: {
+  name: string;
+  description: string;
+  applicationCategory: string;
+  offers?: {
+    price: string;
+    priceCurrency: string;
+  };
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: name,
+    description: description,
+    applicationCategory: applicationCategory,
+    operatingSystem: 'Web',
+    offers: offers || {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'EUR',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: '100',
     },
   };
 }

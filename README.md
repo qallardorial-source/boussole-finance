@@ -66,7 +66,9 @@ boussole-finance/
   - **Calculateur de capacité d'emprunt** - Estimer votre crédit immobilier
 
 ### Navigation & UX
+- ✅ **Page d'accueil optimisée** - Hero moderne, statistiques, section "Pourquoi nous choisir", FAQ
 - ✅ **Header professionnel avec mega-menu** - Dropdowns pour Articles et Calculateurs
+- ✅ **Footer enrichi** - 5 colonnes avec 30+ liens internes, toutes catégories
 - ✅ **Recherche intégrée** dans le header
 - ✅ Recherche et filtrage par catégorie dans les pages
 - ✅ **Breadcrumb visuel** (fil d'Ariane)
@@ -81,10 +83,16 @@ boussole-finance/
 - ✅ Newsletter (formulaire placeholder)
 
 ### Technique & SEO
-- ✅ **Sitemap.xml dynamique**
+- ✅ **Page d'accueil SEO** - Contenu riche 800+ mots, H1 optimisé, mots-clés stratégiques
+- ✅ **FAQ avec Schema.org** - FAQPage structured data pour rich snippets Google
+- ✅ **Sitemap.xml dynamique** - Toutes les pages référencées automatiquement
 - ✅ **Robots.txt** SEO-friendly
-- ✅ **Métadonnées optimisées** (Open Graph, Twitter Cards)
-- ✅ **Données structurées JSON-LD** (Schema.org)
+- ✅ **Métadonnées optimisées** - Title, description, keywords sur toutes les pages
+- ✅ **Open Graph & Twitter Cards** - Partage optimisé sur réseaux sociaux
+- ✅ **Données structurées JSON-LD** - Schema.org (Article, FAQPage, Organization, Breadcrumb)
+- ✅ **Maillage interne puissant** - Footer avec 30+ liens, mega-menu complet
+- ✅ **Images optimisées** - Lazy loading, attributs alt descriptifs, tailles responsives
+- ✅ **Accessibilité (WCAG AA)** - Balises sémantiques, aria-labels, contraste optimal
 - ✅ **Manifest PWA**
 - ✅ **Analytics intégré** (Plausible + Google Analytics optionnel)
 - ✅ **Variables d'environnement** (.env)
@@ -127,7 +135,9 @@ Voir [ANALYTICS.md](./ANALYTICS.md) pour configurer Plausible ou Google Analytic
 - **Manifest.json** : Configuration PWA
 - **URLs SEO-friendly** : Propres et descriptives
 
-📖 **Guide complet** : Voir [SEO.md](./SEO.md) pour configuration et bonnes pratiques
+📖 **Guides SEO** :
+- [SEO.md](./SEO.md) - Configuration technique et bonnes pratiques
+- [SEO_OPTIMIZATIONS.md](./SEO_OPTIMIZATIONS.md) - Détail complet de toutes les optimisations appliquées
 
 **⚠️ Configuration requise :**
 1. Remplacer `https://boussole-finance.fr` par votre domaine dans :

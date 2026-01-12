@@ -42,22 +42,25 @@ export default function ArticleCard({
   const categoryColor = categoryColors[category] || "bg-gray-100 text-gray-800";
 
   return (
-    <Link href={href} className="card block no-underline hover:no-underline group">
-      {/* Image */}
-      {image ? (
-        <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden bg-gray-100">
-          <Image
-            src={image}
-            alt={title}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-      ) : (
-        <div className="w-full h-48 mb-4 rounded-lg bg-gradient-to-br from-secondary to-accent flex items-center justify-center">
-          <span className="text-white text-6xl opacity-50">📊</span>
-        </div>
-      )}
+    <article className="card block no-underline hover:no-underline group h-full flex flex-col">
+      <Link href={href} className="flex-1 flex flex-col no-underline hover:no-underline">
+        {/* Image */}
+        {image ? (
+          <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden bg-gray-100">
+            <Image
+              src={image}
+              alt={`Illustration de l'article : ${title}`}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+          </div>
+        ) : (
+          <div className="w-full h-48 mb-4 rounded-lg bg-gradient-to-br from-secondary to-accent flex items-center justify-center">
+            <span className="text-white text-6xl opacity-50" aria-hidden="true">📊</span>
+          </div>
+        )}
 
       {/* Category Badge */}
       <div className="mb-3">
@@ -88,11 +91,12 @@ export default function ArticleCard({
         </div>
       </div>
 
-      {/* Read more link */}
-      <div className="mt-4 text-secondary font-semibold flex items-center gap-2">
-        Lire la suite
-        <span className="group-hover:translate-x-1 transition-transform">→</span>
-      </div>
-    </Link>
+        {/* Read more link */}
+        <div className="mt-auto pt-4 text-secondary font-semibold flex items-center gap-2">
+          Lire la suite
+          <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
+        </div>
+      </Link>
+    </article>
   );
 }
