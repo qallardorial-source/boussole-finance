@@ -6,21 +6,53 @@ import { Mail } from "lucide-react";
 export default function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
+    setErrorMessage("");
 
-    // Simulation d'un appel API
-    setTimeout(() => {
-      console.log("Newsletter subscription:", email);
-      setStatus("success");
-      setEmail("");
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
 
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus("success");
+        setEmail("");
+
+        // Reset le statut après 5 secondes
+        setTimeout(() => {
+          setStatus("idle");
+        }, 5000);
+      } else {
+        setStatus("error");
+        setErrorMessage(data.error || "Une erreur est survenue");
+
+        // Reset le statut d'erreur après 5 secondes
+        setTimeout(() => {
+          setStatus("idle");
+          setErrorMessage("");
+        }, 5000);
+      }
+    } catch (error) {
+      console.error("Newsletter subscription error:", error);
+      setStatus("error");
+      setErrorMessage("Erreur de connexion. Veuillez réessayer.");
+
+      // Reset le statut d'erreur après 5 secondes
       setTimeout(() => {
         setStatus("idle");
-      }, 3000);
-    }, 1000);
+        setErrorMessage("");
+      }, 5000);
+    }
   };
 
   return (
@@ -92,8 +124,15 @@ export default function NewsletterForm() {
             </div>
           )}
 
-          <p className="mt-4 text-xs text-gray-500 text-center">
-            En vous inscrivant, vous acceptez de recevoir nos emails. Vos données restent privées et vous pouvez vous désinscrire à tout moment.
+        {status === "success" && (
+          <p className="mt-4 text-white/90 text-sm">
+            ✅ Merci pour votre inscription ! Vous allez recevoir un email de confirmation.
+          </p>
+        )}
+
+        {status === "error" && errorMessage && (
+          <p className="mt-4 text-red-100 text-sm bg-red-500/20 px-4 py-2 rounded">
+            ❌ {errorMessage}
           </p>
         </div>
       </div>

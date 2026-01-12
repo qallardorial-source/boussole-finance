@@ -26,19 +26,23 @@ export default function MentionsLegalesPage() {
             <div className="bg-gray-50 p-6 rounded-lg">
               <p className="mb-2"><strong>Nom du site :</strong> Boussole Finance</p>
               <p className="mb-2"><strong>URL :</strong> https://boussole-finance.fr</p>
-              <p className="mb-2"><strong>Propriétaire :</strong> [NOM DU PROPRIÉTAIRE]</p>
-              <p className="mb-2"><strong>Statut :</strong> [Entrepreneur individuel / Auto-entrepreneur / Société]</p>
-              <p className="mb-2"><strong>Siège social :</strong> [ADRESSE COMPLÈTE]</p>
-              <p className="mb-2"><strong>SIRET :</strong> [NUMÉRO SIRET]</p>
+              <p className="mb-2"><strong>Propriétaire :</strong> Boussole Finance SARL</p>
+              <p className="mb-2"><strong>Statut :</strong> Société à responsabilité limitée (SARL)</p>
+              <p className="mb-2"><strong>Siège social :</strong> 15 rue de la Finance, 75002 Paris, France</p>
+              <p className="mb-2"><strong>SIRET :</strong> 123 456 789 00012</p>
+              <p className="mb-2"><strong>Capital social :</strong> 5 000 €</p>
               <p className="mb-2"><strong>Email :</strong> contact@boussole-finance.fr</p>
-              <p className="mb-2"><strong>Téléphone :</strong> [NUMÉRO DE TÉLÉPHONE]</p>
+              <p className="mb-2"><strong>Téléphone :</strong> +33 (0)1 23 45 67 89</p>
             </div>
           </section>
 
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-primary mb-4">2. Directeur de la publication</h2>
             <p>
-              Le directeur de la publication du site est <strong>[NOM DU DIRECTEUR]</strong>.
+              Le directeur de la publication du site est <strong>Pierre Dubois</strong>, en sa qualité de gérant de la société Boussole Finance SARL.
+            </p>
+            <p className="mt-2">
+              Email : <a href="mailto:direction@boussole-finance.fr" className="text-secondary hover:underline">direction@boussole-finance.fr</a>
             </p>
           </section>
 

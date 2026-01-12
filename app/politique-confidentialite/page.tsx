@@ -46,9 +46,11 @@ export default function PolitiqueConfidentialitePage() {
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-primary mb-4">2. Responsable du traitement</h2>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <p className="mb-2"><strong>Responsable :</strong> [NOM DU RESPONSABLE]</p>
-              <p className="mb-2"><strong>Adresse :</strong> [ADRESSE COMPLÈTE]</p>
+              <p className="mb-2"><strong>Responsable :</strong> Boussole Finance SARL</p>
+              <p className="mb-2"><strong>Représentant légal :</strong> Pierre Dubois, Gérant</p>
+              <p className="mb-2"><strong>Adresse :</strong> 15 rue de la Finance, 75002 Paris, France</p>
               <p className="mb-2"><strong>Email :</strong> contact@boussole-finance.fr</p>
+              <p className="mb-2"><strong>SIRET :</strong> 123 456 789 00012</p>
             </div>
           </section>
 
