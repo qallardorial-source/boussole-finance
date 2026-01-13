@@ -124,16 +124,13 @@ export default function NewsletterForm() {
             </div>
           )}
 
-        {status === "success" && (
-          <p className="mt-4 text-white/90 text-sm">
-            ✅ Merci pour votre inscription ! Vous allez recevoir un email de confirmation.
-          </p>
-        )}
-
-        {status === "error" && errorMessage && (
-          <p className="mt-4 text-red-100 text-sm bg-red-500/20 px-4 py-2 rounded">
-            ❌ {errorMessage}
-          </p>
+          {status === "error" && errorMessage && (
+            <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+              <p className="text-red-800 text-sm font-medium">
+                ❌ {errorMessage}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </div>
