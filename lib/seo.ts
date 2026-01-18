@@ -5,7 +5,7 @@ export const siteConfig = {
   title: 'Boussole Finance - Guide de Finance Personnelle pour Débutants',
   description: 'Apprenez la finance personnelle simplement : banques, investissements, épargne. Tests de produits et calculateurs gratuits.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://boussole-finance.fr',
-  ogImage: '/og-image.jpg',
+  ogImage: '/og-image.svg',
   keywords: [
     'finance personnelle',
     'banque en ligne',

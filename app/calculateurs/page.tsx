@@ -114,7 +114,7 @@ export default function CalculateursPage() {
               Lire nos articles
             </a>
             <a
-              href="/tests-produits"
+              href="/tests"
               className="px-8 py-3 bg-white/20 hover:bg-white/30 text-white font-bold rounded-lg border-2 border-white transition-colors"
             >
               Comparer les produits
